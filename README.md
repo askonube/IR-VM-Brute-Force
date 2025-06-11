@@ -60,7 +60,7 @@ After the rule was created, we see two entities: the host machine `win-vm-mde` a
 
 ![image](https://github.com/user-attachments/assets/f5376744-0aa6-46c7-9cd5-114bbe0aa36d)
 
-Another query was run but to check any new brute force attempts that occurred in the last hour. Coincidentally, the IP address `193.37.69.105` was attempting to login to the host `win-vm-mde` as the brute force detection rule was being created. It is very likely that due to the concurrent and very recent actions from the threat actor, Microsoft Sentinel only processed the most recent attacks as the most relevant alerts to be included in this rule detection. The other IP addresses may not be correlated or displayed until the incident enough time to fully update. As a result, rather than utilising an incorrect query, the problem stemmed from latency and data refreshing. The Incidents diagram below shows only the host machine `win-vm-mde` and the IP address `193.37.69.105`.
+Another query was run to check for any new brute force attempts that occurred in the last hour. Coincidentally, the IP address `193.37.69.105` was attempting to log in to the host `win-vm-mde` at the same time the brute force detection rule was being created. It is very likely that due to the concurrent and very recent activity from the threat actor, Microsoft Sentinel only processed the most recent attacks as the most relevant alerts to be included in this detection rule. The other IP addresses may not be correlated or displayed until the incident has had enough time to fully update. As a result, rather than an issue with the query itself, the cause may have been due to latency and data refresh timing. Consequently, the incident diagram below shows only the host machine `win-vm-mde` and the IP address `193.37.69.105`.
 
 ![image](https://github.com/user-attachments/assets/8cb74516-252b-4a8c-aaae-303b37367968)
 
@@ -84,12 +84,7 @@ Despite this technical hiccup, a subsequent query was executed to verify if any 
 
 ### **Closure**
 
-It is classified as a True Positive - Suspicious Activity. Brute force attempt occurred but was unsuccessful. 
-Review and confirm incident resolution.
-Review/observe your notes for the incident.
-Finalize reporting and close the case.
-Close out the Incident within Sentinel as a “True Positive”
-
+The incident response team has reviewed and confirmed the resolution of the event. All containment and remediation steps have been completed, and relevant findings have been documented. This incident has been classified as a `True Positive – Suspicious Activity`. A brute force attack was detected targeting the `win-vm-mde` host. However, all attempts were unsuccessful, and no unauthorised access was achieved.
 
 
 
