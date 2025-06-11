@@ -61,6 +61,8 @@ Containment Actions
 <img width="1547" alt="Screenshot 2025-06-11 210357" src="https://github.com/user-attachments/assets/973f0fd2-e37c-416a-bffd-bc3981ccf6fa" />
 
 
+Closure
+It is classified as a True Positive - Suspicious Activity. Brute force attempt occurred but was unsuccessful. 
 
 
 
