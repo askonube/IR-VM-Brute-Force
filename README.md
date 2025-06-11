@@ -32,6 +32,38 @@
 
 ![image](https://github.com/user-attachments/assets/dcc8af07-2960-4d5a-939a-8533461b4f08)
 
+
 ![image](https://github.com/user-attachments/assets/8cb74516-252b-4a8c-aaae-303b37367968)
 
 ![image](https://github.com/user-attachments/assets/774cd2fd-e65d-44b6-a707-1dfad8124639)
+
+
+Incident Summary
+
+One virtual machine, `win-vm-mde`, was targeted by repeated brute force login attempts originating from four different IP addresses. Notably, as the alert was generated, the most recent threat actor was actively attempting to log in via brute force, triggering the alert concurrently with the incident creation. This timing likely explains why the accompanying graphic displays only one malicious IP address instead of all four.
+
+Details of failed login attempts:
+![image](https://github.com/user-attachments/assets/a24b208d-a19e-4cdb-aa4b-5dd551b5fcd0)
+
+
+
+A subsequent query was executed to verify if any of these malicious IP addresses successfully logged in. No successful logons were detected from any of the identified IPs.
+
+![image](https://github.com/user-attachments/assets/02b84c34-c5a8-4f09-97c9-cd8b4f74f16c)
+
+
+Containment Actions
+- The affected VM was isolated using Microsoft Defender for Endpoint (MDE).
+- A full antimalware scan was performed on the VM through MDE.
+- Network Security Group (NSG) rules were tightened to block Remote Desktop Protocol (RDP) access from the public internet, allowing connections only from approved IP addresses.
+- A corporate policy has been proposed to enforce this NSG lockdown for all virtual machines moving forward.
+
+<img width="1547" alt="Screenshot 2025-06-11 210357" src="https://github.com/user-attachments/assets/973f0fd2-e37c-416a-bffd-bc3981ccf6fa" />
+
+
+
+
+
+
+
+
