@@ -35,11 +35,11 @@
 ![image](https://github.com/user-attachments/assets/f68a6708-eb8a-4f47-8960-1c78fefaf069)
 
 - The appropriate Tactics, Techniques and Procedures (TTPs) from the MITRE ATT&CK Framework were selected for this detection rule.
-  - Credential Access (T1110)
+  - Credential Access (TA0006)
     - Brute Force (T1110)
       - Password Guessing (T1110.001)
       - Password Cracking (T1110.002)
-  - Discovery (T1087)
+  - Discovery (TA0007)
     - Account Discovery (T1087)
       - Local Account Discovery (T1087.001)
 
@@ -49,7 +49,7 @@
 ![image](https://github.com/user-attachments/assets/e806d796-96d2-4e10-8c69-268dc9113e8a)
 
 
-Microsoft Sentinel will execute the query to log any accounts that failed login attempts on the `win-vm-mde` host machine. In the following Incidents diagram, two entities will be displayed: the target device `(DeviceName)` under attack, and the remote IP addresses `(RemoteIP)` attempting the login.
+Another query will be executed against the data in the Log Analytics workspace to log any accounts that failed login attempts on the `win-vm-mde` host machine. In the following Incidents diagram, two entities will be displayed: the target device `(DeviceName)` under attack, and the remote IP addresses `(RemoteIP)` attempting the login.
 
 
 ![image](https://github.com/user-attachments/assets/eb293841-81f5-45bd-aa04-65d7ddef75d5)
